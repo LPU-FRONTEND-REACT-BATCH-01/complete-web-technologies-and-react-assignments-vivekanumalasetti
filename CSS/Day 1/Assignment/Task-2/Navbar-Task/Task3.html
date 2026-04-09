@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>React Navbar Clone</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  background: #1f2937;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 28px;
+  background: #1f2937;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 28px;
+}
+
+.version {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #374151;
+  border-radius: 999px;
+  padding: 6px 12px;
+  margin-left: 15px;
+  width: 780px;
+}
+
+.search-icon svg{
+  width:16px;
+  height:16px;
+  stroke:#9ca3af;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #e5e7eb;
+  flex: 1;
+  font-size: 14px;
+  margin-left:8px;
+}
+
+.shortcut {
+  display: flex;
+  gap: 4px;
+}
+
+.shortcut span {
+  font-size: 11px;
+  color: #d1d5db;
+  background: #1f2937;
+  border: 1px solid #4b5563;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.right-section a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.icon svg{
+  width:18px;
+  height:18px;
+  fill:#e5e7eb;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="left-section">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" class="logo">
+    <span class="version">v19.2</span>
+
+    <div class="search-bar">
+      <span class="search-icon">
+        <!-- Search Icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </span>
+      <input type="text" placeholder="Search">
+      <div class="shortcut">
+        <span>Ctrl</span>
+        <span>K</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-section">
+    <a href="#">Learn</a>
+    <a href="#">Reference</a>
+    <a href="#">Community</a>
+    <a href="#">Blog</a>
+
+    <!-- Sun Icon -->
+    <span class="icon">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5"/>
+        <g stroke="#e5e7eb" stroke-width="2">
+          <line x1="12" y1="1" x2="12" y2="4"/>
+          <line x1="12" y1="20" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
+          <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="4" y2="12"/>
+          <line x1="20" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
+          <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
+        </g>
+      </svg>
+    </span>
+
+    <!-- Language Icon -->
+    <span class="icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 5h12"/>
+        <path d="M10 5c0 7-4 11-4 11"/>
+        <path d="M6 9c2 2 5 3 8 3"/>
+        <path d="M16 13l2 6"/>
+        <path d="M20 13l-2 6"/>
+      </svg>
+    </span>
+
+    <!-- GitHub Icon -->
+    <span class="icon">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.58 2 12.26C2 16.73 4.87 20.53 8.84 21.84C9.34 21.93 9.5 21.62 9.5 21.35V19.68C7 20.24 6.48 18.5 6.48 18.5C6 17.3 5.3 17 5.3 17C4.3 16.3 5.4 16.32 5.4 16.32C6.5 16.4 7.1 17.5 7.1 17.5C8.1 19.2 9.8 18.7 10.5 18.4C10.6 17.7 10.9 17.2 11.3 16.9C9.3 16.7 7.2 15.9 7.2 12.3C7.2 11.3 7.6 10.5 8.2 9.9C8.1 9.6 7.8 8.6 8.3 7.2C8.3 7.2 9.1 7 11 8.2C11.7 8 12.4 7.9 13.1 7.9C13.8 7.9 14.5 8 15.2 8.2C17.1 7 17.9 7.2 17.9 7.2C18.4 8.6 18.1 9.6 18 9.9C18.6 10.5 19 11.3 19 12.3C19 15.9 16.9 16.7 14.9 16.9C15.4 17.3 15.8 18.1 15.8 19.2V21.35C15.8 21.62 16 21.94 16.5 21.84C20.47 20.53 23.34 16.73 23.34 12.26C23.34 6.58 18.86 2 12 2Z"/>
+      </svg>
+    </span>
+
+  </div>
+
+</header>
+
+</body>
+</html>
