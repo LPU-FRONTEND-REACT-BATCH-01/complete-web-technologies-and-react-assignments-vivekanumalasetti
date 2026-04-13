@@ -46,21 +46,25 @@ function values(username, email, password) {
 
 
 
-    // return {
-    //     username,
-    //     email,
-    //     passwordStatus
-    // };
+    return {
+        username,
+        email,
+        passwordStatus
+    };
 }
 
 console.log(values(username, email, password));
 
 
-// let userData=values(username,email,password)
+let userData=values(username,email,password)
 
 
-// console.log(userData);
+// console.log(userData.obj1.name);
 
-// Object.keys(userData),
+
+
+// // console.log(userData);
+
+// // Object.keys(userData),
 
 
