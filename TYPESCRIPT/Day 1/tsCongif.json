@@ -1,0 +1,7 @@
+{
+    "compilerOptions":{
+        "rootDir":"../Day1/src",
+        "outDir":"./dist",
+        "noEmitOnError":true
+    }
+}
