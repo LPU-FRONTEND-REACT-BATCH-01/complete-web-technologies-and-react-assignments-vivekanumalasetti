@@ -1,0 +1,17 @@
+h2{
+    background-color: lightblue;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-colour: green;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        background-colour: red;
+    }
+}
